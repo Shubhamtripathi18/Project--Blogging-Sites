@@ -1,25 +1,27 @@
 {
-  "name": "project",
+  "name": "project01",
   "version": "1.0.0",
   "description": "Repository for backend cohort - Thorium",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nav7033/thorium.git"
+    "url": "git+https://github.com/Devashish514/project-bloggingSite.git"
   },
-  "author": "Naveen Kumar Mandal",
+  "author": "Devashish Goswami",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nav7033/thorium/issues"
+    "url": "https://github.com/Devashish514/project-bloggingSite.git/issues"
   },
-  "homepage": "https://github.com/nav7033/thorium#readme",
+  "homepage": "https://github.com/Devashish514/project-bloggingSite.git#readme",
   "dependencies": {
     "axios": "^0.26.1",
     "body-parser": "^1.19.2",
     "cors": "^2.8.5",
+    "email-validator": "^2.0.4",
     "express": "^4.17.3",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.1",

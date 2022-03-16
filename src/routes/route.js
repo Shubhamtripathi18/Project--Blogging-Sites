@@ -1,10 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const userController= require("../controllers/userController")
-const middleware = require ("../middleware/auth")
+const mainController= require("../controller/mainController.js");
+const { middleware } = require('../middleWare/middleware.js');
 
-router.get("/test-me", function (req, res) {
-    res.send("My first ever api!")
-})
-
-module.export=router;
+router.post("/authors",mainController.createAuthor);
+router.post("/blogs",middleware,mainController.createBlog);
+router.get("/getblog",middleware,mainController.getFilteredBlogs);
+router.put("/updateBlog/:blogId",middleware,mainController.updateBlog);
+router.delete("/deleteblogs/:blogId",middleware,mainController.deleteBlog);
+router.delete("/deleteblogsbyquery",middleware, mainController.queryParamsDelete);
+router.post("/login",mainController.login);
+module.exports=router;

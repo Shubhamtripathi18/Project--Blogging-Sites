@@ -16,10 +16,9 @@ const authorSchema = new mongoose.Schema( {
         required:true
     },
     email:{
-        type:string,
+        type:String,
         unique:true,
-        required:true
-    },
+        required:true  },
     password:{
         type:String,
         required:true
@@ -28,4 +27,4 @@ const authorSchema = new mongoose.Schema( {
     
 }, { timestamps: true });
 
-module.exports = mongoose.model('Author', authorSchema)
+module.exports = mongoose.model('projectAuthor', authorSchema)
