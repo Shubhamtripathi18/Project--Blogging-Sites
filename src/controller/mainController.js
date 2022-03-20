@@ -114,7 +114,6 @@ const updateBlog = async function (req, res) {
 const deleteBlog = async function (req, res) {
     try {
         let blogId = req.params.blogId
-        //validate
         if (req.validate.userId != req.query.authorId) {
             return res.status(401).send({ status: false, msg: "User not Authorized"});
         }

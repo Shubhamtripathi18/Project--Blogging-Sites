@@ -8,6 +8,7 @@ router.post("/blogs",middleware,mainController.createBlog);
 router.get("/getblog",middleware,mainController.getFilteredBlogs);
 router.put("/updateBlog/:blogId",middleware,mainController.updateBlog);
 router.delete("/deleteblogs/:blogId",middleware,mainController.deleteBlog);
-router.delete("/deleteblogsbyquery",middleware, mainController.queryParamsDelete);
+router.delete("/deleteblogsbyquery", middleware,mainController.queryParamsDelete);
 router.post("/login",mainController.login);
 module.exports=router;
+
